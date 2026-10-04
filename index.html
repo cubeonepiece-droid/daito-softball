@@ -5,57 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>大東子ども会ソフトボール</title>
+<link rel="stylesheet" href="common.css">
 <style>
-  :root {
-    --bg: #f4f7fb;
-    --card: #ffffff;
-    --text: #1f2933;
-    --muted: #5f6b7a;
-    --accent: #1f4e79;
-    --accent-hover: #163a5a;
-    --line: #d9e2ec;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #10161d;
-      --card: #18212b;
-      --text: #e6edf3;
-      --muted: #9aa7b4;
-      --accent: #4a8fd0;
-      --accent-hover: #6aa6dd;
-      --line: #2a3644;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
-    line-height: 1.7;
-  }
-  main { max-width: 560px; margin: 0 auto; padding: 40px 16px 56px; }
+  main { max-width: 560px; padding-top: 40px; }
   .eyebrow { color: var(--muted); font-size: 14px; margin: 0 0 4px; }
   h1 { font-size: 24px; color: var(--accent); margin: 0 0 24px; line-height: 1.4; }
   .card {
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 12px;
-    padding: 24px 20px;
+    padding: 20px;
+    margin-bottom: 16px;
   }
-  .card h2 { font-size: 18px; margin: 0 0 4px; }
-  .meta { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
-  .card p.desc { margin: 0 0 20px; font-size: 15px; }
+  .card h2 { font-size: 18px; margin: 0 0 2px; }
+  .card .meta { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
+  .card p.desc { margin: 0 0 16px; font-size: 15px; }
   .btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
-    width: 100%; padding: 14px 16px;
+    width: 100%; padding: 13px 16px;
     background: var(--accent); color: #fff;
     border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;
   }
   .btn:hover { background: var(--accent-hover); }
-  .btn svg { width: 20px; height: 20px; }
-  .sub-link { display: block; text-align: center; margin-top: 12px; font-size: 14px; color: var(--accent); }
-  footer { margin-top: 32px; color: var(--muted); font-size: 13px; text-align: center; }
+  .btn.outline { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+  .btn.outline:hover { background: var(--head); }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .sub-link { display: block; text-align: center; margin-top: 10px; font-size: 14px; }
+  footer { margin-top: 28px; color: var(--muted); font-size: 13px; text-align: center; }
 </style>
 </head>
 <body>
@@ -65,13 +41,27 @@
 
   <section class="card">
     <h2>大東子ども会ソフトボールのルール</h2>
-    <p class="meta">2026年10月版 ／ PDF（A4・3ページ）</p>
+    <p class="meta">保護者向け ／ 2026年10月版 ／ PDF（A4・3ページ）</p>
     <p class="desc">準備していただく用品、チームTシャツ、集合・連絡のルール、出欠連絡アプリ「TeamHub」の登録方法をまとめています。</p>
-    <a class="btn" href="daito-softball-rules.pdf" download="大東子ども会ソフトボールのルール.pdf">
+    <a class="btn" href="rules.pdf" download="大東子ども会ソフトボールのルール.pdf">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
       PDFをダウンロード
     </a>
-    <a class="sub-link" href="daito-softball-rules.pdf" target="_blank" rel="noopener">ブラウザで開いて見る</a>
+    <a class="sub-link" href="rules.pdf" target="_blank" rel="noopener">ブラウザで開いて見る</a>
+  </section>
+
+  <section class="card">
+    <h2>サインブック</h2>
+    <p class="meta">選手向け ／ こうげきのサイン</p>
+    <p class="desc">サインの見かた、サイン一覧、へんじのしかた、サインの約束をまとめています。サインクイズで練習もできます。</p>
+    <a class="btn outline" href="signs.html">サインブックを見る</a>
+  </section>
+
+  <section class="card">
+    <h2>グラウンド作成の手引き</h2>
+    <p class="meta">保護者・コーチ向け ／ 小学生用グラウンド</p>
+    <p class="desc">小学生用グラウンドの寸法、必要な道具、作図とライン引きの手順、試合前後のチェックリストです。</p>
+    <a class="btn outline" href="ground.html">手引きを見る</a>
   </section>
 
   <footer>ご不明な点は監督・コーチまでお問い合わせください。</footer>

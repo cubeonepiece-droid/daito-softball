@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>グラウンド作成の手引き</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  :root {
+    --axis: #5b6675; --grid: #c3ccd6; --cat1: #2463c4; --cat2: #d23f2b; --tint: #eef2f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --axis: #a3afbd; --grid: #3a4757; --cat1: #6aa0f0; --cat2: #f06a54; --tint: #223044; }
+  }
+  figure { margin: 16px 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+  figure svg { display: block; width: 100%; height: auto; }
+  figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 6px; }
+  .svg-ink { fill: var(--text); }
+  .svg-quiet { fill: var(--muted); }
+  ul.check { list-style: none; padding-left: 0; }
+  ul.check li { padding-left: 1.8em; position: relative; margin-bottom: 4px; }
+  ul.check li::before { content: "☐"; position: absolute; left: 0.2em; color: var(--accent); }
+</style>
+</head>
+<body>
+<main class="doc">
+  <a class="back" href="./">← トップへ戻る</a>
+  <h1>ソフトボールグラウンド作成の手引き（小学生）</h1>
+  <p class="meta">2026年9月27日</p>
+
+  <h2>グラウンド全体図</h2>
+  <p>本塁を要に、外野フェンス（53.34m以上）、ファウルラインの外側7.62m以上のボールデッドライン、その外にベンチを置きます。</p>
+  <figure>
+    <svg viewBox="0 0 760 756" role="img" aria-label="小学生用グラウンドの全体配置" font-size="13">
+      <text x="24" y="32" font-size="15" font-weight="600" class="svg-ink">小学生用グラウンドの全体配置（塁間16.76m）</text>
+      <text x="24" y="52" font-size="11.5" class="svg-quiet">概略の縮尺。距離はすべて本塁基準</text>
+      <line x1="24" y1="130" x2="60" y2="130" stroke="var(--cat2)" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="68" y="134" font-size="11.5" class="svg-ink">ボールデッドライン（ここより外はボールデッド）</text>
+      <line x1="424" y1="130" x2="460" y2="130" stroke="var(--axis)" stroke-width="3"/>
+      <text x="468" y="134" font-size="11.5" class="svg-ink">外野フェンス・バックストップ</text>
+      <path d="M97 317A400 400 0 0 1 663 317" fill="none" stroke="var(--axis)" stroke-width="3"/>
+      <text x="380" y="186" text-anchor="middle" class="svg-ink">外野フェンス（本塁から53.34m以上）</text>
+      <text x="380" y="320" text-anchor="middle" font-size="11.5" class="svg-quiet">フェア地域</text>
+      <g fill="none" stroke="var(--cat2)" stroke-width="2" stroke-dasharray="6 4">
+        <path d="M663 317L703 357L460 600L460 660"/>
+        <path d="M97 317L57 357L300 600L300 660"/>
+      </g>
+      <text x="150" y="524" text-anchor="end" font-size="11.5" class="svg-quiet"><tspan>ファウルラインの外側</tspan><tspan x="150" dy="16">7.62m以上で引く</tspan></text>
+      <line x1="300" y1="660" x2="460" y2="660" stroke="var(--axis)" stroke-width="3"/>
+      <text x="380" y="682" text-anchor="middle" class="svg-ink">バックストップ（本塁後方7.62m以上）</text>
+      <g stroke="var(--axis)" stroke-width="1.25">
+        <line x1="380" y1="600" x2="663" y2="317"/>
+        <line x1="380" y1="600" x2="97" y2="317"/>
+      </g>
+      <path d="M469 511L380 422L291 511" fill="none" stroke="var(--axis)" stroke-width="1.25"/>
+      <g fill="var(--tint)" stroke="var(--axis)" stroke-width="1.25">
+        <rect x="463" y="505" width="12" height="12" transform="rotate(45 469 511)"/>
+        <rect x="374" y="416" width="12" height="12" transform="rotate(45 380 422)"/>
+        <rect x="285" y="505" width="12" height="12" transform="rotate(45 291 511)"/>
+        <polygon points="375,596 385,596 385,601 380,606 375,601" stroke-width="1"/>
+      </g>
+      <text x="486" y="516" class="svg-ink">一塁</text>
+      <text x="380" y="406" text-anchor="middle" class="svg-ink">二塁（本塁から23.70m）</text>
+      <text x="274" y="516" text-anchor="end" class="svg-ink">三塁</text>
+      <text x="326" y="458" text-anchor="end" font-size="11.5" class="svg-quiet">塁間 16.76m</text>
+      <circle cx="380" cy="509" r="18" fill="none" stroke="var(--axis)" stroke-width="1.25"/>
+      <rect x="374" y="507" width="12" height="3" fill="var(--axis)"/>
+      <text x="380" y="481" text-anchor="middle" font-size="11.5" class="svg-ink">投手板（12.19m）</text>
+      <g fill="none" stroke="var(--cat1)" stroke-width="1.25">
+        <rect x="360" y="592" width="7" height="16"/>
+        <rect x="393" y="592" width="7" height="16"/>
+        <rect x="370" y="610" width="20" height="23"/>
+        <line x1="467" y1="551" x2="491" y2="527"/>
+        <line x1="293" y1="551" x2="269" y2="527"/>
+        <line x1="429" y1="560" x2="474" y2="516"/>
+        <circle cx="420" cy="625" r="7"/>
+        <circle cx="340" cy="625" r="7"/>
+      </g>
+      <g font-size="11.5" font-weight="600" class="svg-ink">
+        <text x="354" y="604" text-anchor="end">①</text>
+        <text x="396" y="648">②</text>
+        <text x="432" y="629">③</text>
+        <text x="328" y="629" text-anchor="end">③</text>
+        <text x="494" y="560">④</text>
+        <text x="266" y="560" text-anchor="end">④</text>
+        <text x="442" y="532" text-anchor="middle">⑤</text>
+      </g>
+      <rect x="500" y="600" width="64" height="18" rx="3" fill="var(--tint)" stroke="var(--axis)" stroke-width="1.25" transform="rotate(-45 532 609)"/>
+      <text x="556" y="654" class="svg-ink">一塁側ベンチ</text>
+      <rect x="196" y="600" width="64" height="18" rx="3" fill="var(--tint)" stroke="var(--axis)" stroke-width="1.25" transform="rotate(45 228 609)"/>
+      <text x="204" y="654" text-anchor="end" class="svg-ink">三塁側ベンチ</text>
+      <g font-size="11.5" class="svg-ink">
+        <text x="24" y="716">① バッターズボックス</text>
+        <text x="200" y="716">② キャッチャーズボックス</text>
+        <text x="400" y="716">③ 次打者サークル</text>
+        <text x="24" y="738">④ コーチャーズボックス</text>
+        <text x="200" y="738">⑤ スリーフットライン（一塁線のみ）</text>
+      </g>
+    </svg>
+    <figcaption>グラウンド全体図 · 小学生用</figcaption>
+  </figure>
+  <p>外野フェンスがない場合は、本塁から53.34mの円弧をライン・コーンで示し、超えた打球の扱いを試合前に両チームで決めます。</p>
+
+  <h2>必要な用地と方位</h2>
+  <p>外野フェンス53.34mとファウル地域・バックストップを含め、約65m × 65mの平坦地が必要です。本塁を用地の一角に置き、対角線方向に外野を取ると最も効率よく収まります。</p>
+  <ul>
+    <li><strong>方位</strong>：本塁から二塁への向きを東北東にすると、午後の西日が打者・捕手の正面に入りません。</li>
+    <li><strong>ファウル地域</strong>：ファウルラインの外側に7.62m以上。この境界がボールデッドラインになります。</li>
+    <li><strong>バックストップ</strong>：本塁の後方7.62m以上。</li>
+    <li><strong>地面</strong>：水たまりや凹凸、石、排水溝の蓋などは作図前に確認します。</li>
+  </ul>
+
+  <h2>主要寸法一覧</h2>
+  <p>小学生は塁間16.76m・投球距離12.19mで、一般（18.29m・14.02m）より一回り小さいグラウンドです。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>項目</th><th>寸法</th></tr></thead>
+    <tbody>
+      <tr><td>塁間</td><td>16.76m（55ft）</td></tr>
+      <tr><td>本塁尖端〜二塁中心、一塁〜三塁</td><td>23.70m</td></tr>
+      <tr><td>投球距離（本塁尖端〜投手板前縁）</td><td>12.19m（40ft、2025年度改正で延伸）</td></tr>
+      <tr><td>外野フェンス</td><td>本塁から53.34m以上（175ft）</td></tr>
+      <tr><td>ボールデッドライン</td><td>ファウルラインの外側7.62m以上</td></tr>
+      <tr><td>バックストップ</td><td>本塁後方7.62m以上</td></tr>
+      <tr><td>投手サークル</td><td>半径2.44m、投手板前縁中央が中心</td></tr>
+      <tr><td>バッターズボックス</td><td>幅0.91m × 長さ2.13m、本塁から0.15m離す</td></tr>
+      <tr><td>キャッチャーズボックス</td><td>幅2.57m × 長さ3.05m（打席後端から後方へ）</td></tr>
+      <tr><td>コーチャーズボックス</td><td>塁線から3.66m外側、長さ4.57m</td></tr>
+      <tr><td>スリーフットライン</td><td>本塁・一塁間の後半8.38m、一塁線の0.91m外側</td></tr>
+      <tr><td>次打者サークル</td><td>半径0.76m、本塁とベンチの間</td></tr>
+      <tr><td>ライン幅</td><td>5～7.6cm</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">塁間・外野距離は公開資料で確認した小学生規格です（<a href="https://softball.plala-hometime.com/field-dimensions/">出典</a>、<a href="https://softball-times.com/20200523-4">出典</a>）。各ボックス類は一般規格の概数なので、大会要項やJSA規則で確認してください。</p>
+  <p class="note">小学生の投球距離は、<a href="https://www.softball.or.jp/bulletin/index/pdf/Jsa_Rule_Changes.pdf">JSA 2025年度ルール改正点</a>（ルール2-3項）で10.67mから12.19mに延伸されました。古い資料や既存の投手板位置は10.67mのままのことがあるので注意してください。</p>
+
+  <h2>必要な道具・資材</h2>
+  <p>作図は3人体制（巻尺の両端を2人、杭打ち1人）が最も早く、正確です。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>品目</th><th>数量</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td>スチールまたはガラス繊維の巻尺（50m）</td><td>2本</td><td>塁間・対角線の同時計測</td></tr>
+      <tr><td>巻尺（5m）</td><td>1本</td><td>ボックス類の寸法取り</td></tr>
+      <tr><td>木杭またはペグ・長釘</td><td>20本程度</td><td>基準点の目印</td></tr>
+      <tr><td>ハンマー</td><td>1本</td><td>杭打ち</td></tr>
+      <tr><td>水糸（100m巻）</td><td>1巻</td><td>ファウルラインの直線出し</td></tr>
+      <tr><td>ラインカー</td><td>1台</td><td>ライン引き</td></tr>
+      <tr><td>ライン用粉（炭酸カルシウム）</td><td>20kg袋を1～2袋</td><td>ライン材料。消石灰は目や皮膚を傷めるため使わない</td></tr>
+      <tr><td>マーキングスプレー</td><td>1本</td><td>円や交点の仮印</td></tr>
+      <tr><td>ベース一式（本塁・一塁ダブルベース・二塁・三塁）</td><td>1式</td><td>塁の設置</td></tr>
+      <tr><td>投手板（61cm × 15.2cm）</td><td>1枚</td><td>投手板の設置</td></tr>
+      <tr><td>トンボ・レーキ</td><td>各数本</td><td>地面の整地</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>作図手順</h2>
+  <p>本塁→二塁→一塁・三塁→投手板の順に杭を打ち、最後に対角線で検算します。</p>
+  <figure>
+    <svg viewBox="0 0 760 512" role="img" aria-label="本塁と二塁を先に決め、一塁と三塁は16.76mの交点で出す" font-size="13">
+      <text x="24" y="32" font-size="15" font-weight="600" class="svg-ink">本塁と二塁を先に決め、一塁と三塁は16.76mの交点で出す</text>
+      <g stroke="var(--grid)" stroke-width="1.25">
+        <line x1="530" y1="280" x2="620" y2="190"/>
+        <line x1="230" y1="280" x2="140" y2="190"/>
+      </g>
+      <path d="M380 430L530 280L380 130L230 280Z" fill="none" stroke="var(--axis)" stroke-width="1.25"/>
+      <g fill="none" stroke-width="1.25" stroke-dasharray="5 4">
+        <line x1="380" y1="430" x2="380" y2="130" stroke="var(--cat1)"/>
+        <line x1="230" y1="280" x2="530" y2="280" stroke="var(--axis)"/>
+      </g>
+      <circle cx="380" cy="267" r="28" fill="none" stroke="var(--axis)" stroke-width="1.25"/>
+      <rect x="372" y="265" width="16" height="4" fill="var(--axis)"/>
+      <text x="416" y="258" class="svg-ink">⑤ 投手板</text>
+      <g fill="var(--tint)" stroke="var(--axis)" stroke-width="1.25">
+        <polygon points="372,422 388,422 388,430 380,438 372,430"/>
+        <rect x="523" y="273" width="14" height="14" transform="rotate(45 530 280)"/>
+        <rect x="373" y="123" width="14" height="14" transform="rotate(45 380 130)"/>
+        <rect x="223" y="273" width="14" height="14" transform="rotate(45 230 280)"/>
+      </g>
+      <text x="380" y="464" text-anchor="middle" font-weight="600" class="svg-ink">① 本塁（基準点）</text>
+      <text x="380" y="112" text-anchor="middle" font-weight="600" class="svg-ink">② 二塁（本塁から23.70m）</text>
+      <text x="550" y="290" class="svg-ink"><tspan font-weight="600">③ 一塁</tspan><tspan x="550" dy="18" font-size="11.5" class="svg-quiet">本塁・二塁から各16.76m</tspan></text>
+      <text x="210" y="290" text-anchor="end" class="svg-ink"><tspan font-weight="600">④ 三塁</tspan><tspan x="210" dy="18" font-size="11.5" class="svg-quiet">本塁・二塁から各16.76m</tspan></text>
+      <g font-size="11.5" class="svg-quiet">
+        <text x="470" y="370">16.76m</text>
+        <text x="470" y="200">16.76m</text>
+        <text x="290" y="200" text-anchor="end">16.76m</text>
+        <text x="290" y="370" text-anchor="end">16.76m</text>
+        <text x="390" y="190">23.70m</text>
+        <text x="628" y="186">一塁線</text>
+        <text x="132" y="186" text-anchor="end">三塁線</text>
+        <text x="24" y="494">灰色の破線：一塁〜三塁も23.70mなら正しい直角（検算）</text>
+      </g>
+    </svg>
+    <figcaption>作図の順番 · 本塁→二塁→一塁・三塁→投手板</figcaption>
+  </figure>
+  <ol>
+    <li><strong>本塁を決める</strong>：本塁の尖端（捕手側の頂点）に杭を打ちます。後方7.62m以上の余裕と、二塁方向の方位を確認します。</li>
+    <li><strong>二塁を出す</strong>：本塁杭から二塁方向へ水糸を張り、23.70mの地点に杭を打ちます。ここが二塁ベースの中心です。</li>
+    <li><strong>一塁・三塁を出す</strong>：巻尺2本を使い、本塁杭から16.76m、二塁杭から16.76mを同時に引きます。2本が交わる点が一塁、反対側で同様に三塁です。</li>
+    <li><strong>検算する</strong>：一塁杭〜三塁杭が23.70mになるか測ります。ずれが5cmを超える場合は手順2からやり直します。</li>
+    <li><strong>投手板を出す</strong>：本塁〜二塁の水糸上、本塁尖端から投球距離12.19mの地点が投手板前縁の中央です。</li>
+    <li><strong>ファウルラインを延長する</strong>：本塁杭から一塁杭・三塁杭を通るように水糸を外野フェンスまで伸ばします。</li>
+  </ol>
+  <p>一塁・三塁ベースはフェア地域の内側に置き、ベースの外角を杭に合わせます。二塁ベースは中心を杭に合わせます。</p>
+
+  <h2>ライン引き</h2>
+  <p>ラインは必ず水糸や巻尺に沿って引き、ファウルラインは糸がラインの外縁（ファウル側）に来るように引きます。ライン自体はフェア地域に含まれるためです。</p>
+  <ol>
+    <li><strong>ファウルライン</strong>：本塁後端から外野フェンスまで。ラインカーは止まらず一定の速さで押すと幅が揃います。</li>
+    <li><strong>バッターズボックス</strong>：本塁の左右に0.15m離して、幅0.91m × 長さ2.13mの長方形を描きます。本塁の横幅中央がボックスの長さの中央に来るように置きます。</li>
+    <li><strong>キャッチャーズボックス</strong>：バッターズボックスの後端から後方へ3.05m、幅2.57m。</li>
+    <li><strong>投手サークル</strong>：投手板前縁中央に打った釘に紐を掛け、半径2.44mで円を描きます。先にスプレーで点を打ち、それをつなぐときれいに引けます。</li>
+    <li><strong>コーチャーズボックス</strong>：一塁線・三塁線から3.66m外側に、塁線と平行に長さ4.57mの線を引きます。</li>
+    <li><strong>スリーフットライン</strong>：本塁・一塁間の後半8.38m、一塁線の0.91m外側に平行線を引きます。</li>
+    <li><strong>次打者サークル</strong>：各ベンチ側、本塁とベンチの中間に半径0.76m。</li>
+  </ol>
+
+  <h2>用具の設置</h2>
+  <p>ベースと投手板はライン引きの後に置き、試合中に動かないよう固定します。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>用具</th><th>規格</th><th>置き方</th></tr></thead>
+    <tbody>
+      <tr><td>本塁</td><td>五角形、幅43.2cm</td><td>尖端を捕手側に向け、尖端を基準杭に合わせる。地面と平らに埋める</td></tr>
+      <tr><td>一塁（ダブルベース）</td><td>38.1cm角 × 2枚（白・オレンジ）</td><td>白をフェア地域、オレンジをファウル地域に並べて固定</td></tr>
+      <tr><td>二塁</td><td>38.1cm角</td><td>中心を二塁杭に合わせる</td></tr>
+      <tr><td>三塁</td><td>38.1cm角</td><td>フェア地域内に置き、外角を三塁杭に合わせる</td></tr>
+      <tr><td>投手板</td><td>61cm × 15.2cm</td><td>前縁中央を投球距離の杭に合わせ、本塁と平行に地面と平らに</td></tr>
+      <tr><td>バックストップ</td><td>—</td><td>本塁後方7.62～9.14m。簡易ネットの場合は転倒しないよう重りで固定</td></tr>
+    </tbody>
+  </table></div>
+  <p>ベースの固定釘やアンカーが地面から出ていないか、設置後に必ず足で踏んで確認します。</p>
+
+  <h2>整備と安全チェックリスト</h2>
+  <p>試合前に次の項目を確認し、試合後はトンボがけと穴埋めを行います。</p>
+  <h3>試合前</h3>
+  <ul class="check">
+    <li>塁間と対角線（23.70m）を再測した</li>
+    <li>投球距離が12.19mになっている（旧規格10.67mのままになっていない）</li>
+    <li>ベース・投手板が固定され、釘やアンカーが出ていない</li>
+    <li>内野に石・ガラス片・凹みがない</li>
+    <li>水たまりはスポンジで吸い取り、砂を散布した</li>
+    <li>ファウル地域・ベンチ前に障害物（自転車、荷物など）がない</li>
+    <li>観客や通行人がファウルボールの飛ぶ範囲にいないよう区切った</li>
+    <li>外野にフェンスがない場合、コーンやラインで本塁打ラインを示し、グラウンドルールを両チームで確認した</li>
+  </ul>
+  <h3>試合後</h3>
+  <ul class="check">
+    <li>投手板前と打席の掘れた穴を埋め、踏み固めた</li>
+    <li>内野全体をトンボで平らにした</li>
+    <li>常設しない場合、ベースと杭を撤収した（基準杭の位置は写真と距離で記録すると次回が速い）</li>
+  </ul>
+
+  <a class="back bottom" href="./">← トップへ戻る</a>
+</main>
+</body>
+</html>

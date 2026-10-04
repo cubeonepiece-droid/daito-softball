@@ -1,0 +1,498 @@
+<!doctype html><html lang="ja"><head><meta name="robots" content="noindex, nofollow"><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ソフトボール サインブック</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
+<style>
+:root{
+  --bg:#eef3ee; --card:#ffffff; --panel:#e3ecdf; --ink:#15223b; --muted:#56637a; --line:#cfdacb;
+  --uni:#1e3d78; --uni2:#142b57; --skin:#f1c79d; --skin-line:#b9835a; --pants:#e8ebef;
+  --yellow:#f3cd22; --red:#d23f2b; --green:#2b7a4a; --blue:#2463c4; --purple:#7a45b8; --orange:#e07a1f;
+  --field:#cfe3c5; --dirt:#d9b98c;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0e1520; --card:#172131; --panel:#223044; --ink:#eef2f8; --muted:#9dabbf; --line:#2c3a50;
+    --uni:#3c67b5; --uni2:#2b4f93; --pants:#c9d0da;
+    --red:#f06a54; --green:#4cb27a; --blue:#6aa0f0; --purple:#b08ae6; --orange:#f39a4a;
+    --field:#2c4a35; --dirt:#6e5a3e;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0e1520; --card:#172131; --panel:#223044; --ink:#eef2f8; --muted:#9dabbf; --line:#2c3a50;
+  --uni:#3c67b5; --uni2:#2b4f93; --pants:#c9d0da;
+  --red:#f06a54; --green:#4cb27a; --blue:#6aa0f0; --purple:#b08ae6; --orange:#f39a4a;
+  --field:#2c4a35; --dirt:#6e5a3e;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;font-weight:500;font-size:16px;line-height:1.75;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,.display{font-family:"Dela Gothic One","Hiragino Sans","Yu Gothic",sans-serif;font-weight:400;letter-spacing:.02em;text-wrap:balance}
+h2{font-size:clamp(24px,4.4vw,32px);margin:0;line-height:1.3;display:flex;align-items:center;gap:12px}
+h2 .ball{flex:none;width:30px;height:30px}
+h3{margin:0;font-weight:900;font-size:19px;line-height:1.4}
+p{margin:0}
+.lead{color:var(--muted);max-width:40em}
+section{display:flex;flex-direction:column;gap:20px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center;padding-block:40px 8px}
+.eyebrow{display:inline-block;font-weight:900;font-size:13px;letter-spacing:.12em;color:var(--green);margin-bottom:8px}
+.hero h1{font-size:clamp(44px,10vw,88px);line-height:1.02;margin:0 0 18px}
+.hero h1 span{display:inline-block;background:var(--yellow);color:#15223b;padding:0 .12em;border-radius:6px;transform:rotate(-2deg)}
+.golden{font-size:clamp(18px,3.2vw,23px);font-weight:900;line-height:1.6;border:3px solid var(--ink);border-radius:14px;padding:14px 18px;background:var(--card)}
+.golden em{font-style:normal;color:var(--red);border-bottom:4px solid var(--yellow)}
+.golden small{display:block;font-size:.72em;color:var(--muted);margin-top:6px}
+.hero-fig{background:var(--panel);border-radius:24px;padding:16px;max-width:360px;justify-self:center;width:100%}
+
+/* sequence example */
+.seq{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:10px 10px 12px;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
+.step.hit{border-color:var(--red);border-width:3px}
+.step.skip{border-style:dashed}
+.step.skip svg{opacity:.55}
+.step .num{position:absolute;top:8px;left:10px;font-family:"Dela Gothic One",sans-serif;font-size:18px;color:var(--muted)}
+.step.hit .num{color:var(--red)}
+.step .where{font-weight:900}
+.step .note{font-size:13px;color:var(--muted)}
+.step.hit .note{color:var(--red);font-weight:900}
+.step.skip .note{font-weight:900}
+.step.key{border-color:var(--ink);border-width:3px;background:color-mix(in srgb,var(--yellow) 22%,var(--card))}
+.step.key .note{color:var(--ink);font-weight:900}
+h3.sub{font-size:21px;margin-top:12px}
+.c-key{--c:var(--ink)}
+.level.key{color:var(--ink)}
+.keyflow{display:flex;flex-direction:column;gap:6px;padding:14px 12px;justify-content:center;height:100%}
+.kf{border-radius:10px;padding:4px 8px;font-weight:900;font-size:13px;line-height:1.35;text-align:center;background:var(--card);border:2px solid var(--line)}
+.kf.x{color:var(--muted);text-decoration:line-through;border-style:dashed}
+.kf.k{background:var(--yellow);color:#15223b;border-color:var(--yellow)}
+.kf.s{border-color:var(--green);color:var(--green)}
+.kf-arrow{text-align:center;color:var(--muted);font-size:12px;line-height:1}
+.answer{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-weight:900;font-size:18px}
+.chip{display:inline-block;border-radius:999px;padding:2px 14px;color:#fff;font-weight:900}
+
+/* sign cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.card-top{display:grid;grid-template-columns:1fr 1fr;background:var(--panel);align-items:end}
+.card-top svg{display:block;width:100%;height:auto}
+.card-body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pair{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.touch{font-weight:900;font-size:17px}
+.arrow{color:var(--muted);font-weight:900}
+.sign-name{font-family:"Dela Gothic One",sans-serif;font-size:26px;line-height:1.2}
+.level{font-size:12px;font-weight:900;letter-spacing:.08em;padding:1px 10px;border-radius:999px;border:2px solid currentColor;margin-left:auto}
+.level.basic{color:var(--green)}
+.level.up{color:var(--orange)}
+.todo{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.todo li{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start}
+.who{font-size:12px;font-weight:900;color:#fff;border-radius:6px;padding:1px 7px;margin-top:3px;white-space:nowrap}
+.who.b{background:var(--blue)}
+.who.r{background:var(--green)}
+.warn{font-size:14px;background:color-mix(in srgb,var(--yellow) 28%,transparent);border-radius:10px;padding:6px 10px}
+.c-bunt{--c:var(--blue)} .c-steal{--c:var(--green)} .c-wait{--c:var(--red)} .c-run{--c:var(--purple)} .c-squeeze{--c:var(--orange)} .c-safety{--c:#0f8a8a}
+.card .sign-name{color:var(--c)}
+.card{border-top:8px solid var(--c)}
+
+/* special */
+.two{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.wide{background:var(--card);border:2px solid var(--line);border-radius:20px;display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px;align-items:center}
+.wide .figbox{background:var(--panel);border-radius:14px}
+.wide .figbox svg{display:block;width:100%;height:auto}
+.wide .txt{display:flex;flex-direction:column;gap:6px}
+
+/* table */
+.tbl-wrap{overflow-x:auto;background:var(--card);border:2px solid var(--ink);border-radius:16px}
+table{border-collapse:collapse;width:100%;min-width:520px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-size:13px;letter-spacing:.08em;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td.big{font-weight:900;font-size:18px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--c);margin-right:8px;vertical-align:middle}
+
+/* promises */
+.promises{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;counter-reset:p}
+.promises li{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px 16px 14px 60px;position:relative;counter-increment:p}
+.promises li::before{content:counter(p);position:absolute;left:14px;top:12px;width:34px;height:34px;border-radius:50%;background:var(--yellow);color:#15223b;font-family:"Dela Gothic One",sans-serif;display:grid;place-items:center;font-size:18px}
+.promises b{display:block;font-size:17px}
+.promises span{color:var(--muted);font-size:15px}
+
+/* quiz */
+.quiz{background:var(--card);border:3px solid var(--ink);border-radius:24px;padding:20px;display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:24px}
+.stage{background:var(--panel);border-radius:18px;position:relative;aspect-ratio:200/232;max-width:100%}
+.stage svg{display:block;width:100%;height:100%}
+.stage .count{position:absolute;top:10px;left:12px;font-weight:900;font-size:14px;background:var(--card);border-radius:999px;padding:0 10px}
+.qside{display:flex;flex-direction:column;gap:14px}
+.modes{display:flex;gap:8px;flex-wrap:wrap}
+button{font:inherit;cursor:pointer}
+.mode{border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:4px 16px;font-weight:900}
+.mode[aria-pressed="true"]{background:var(--ink);color:var(--card)}
+.play{background:var(--red);color:#fff;border:0;border-radius:14px;padding:12px 20px;font-weight:900;font-size:18px;align-self:flex-start}
+.play:disabled{opacity:.5;cursor:default}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.opt{border:2px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:10px;font-weight:900;font-size:16px}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt:disabled{cursor:default}
+.opt.right{background:var(--green);border-color:var(--green);color:#fff}
+.opt.wrong{background:var(--red);border-color:var(--red);color:#fff}
+.result{min-height:3.5em;font-weight:900;font-size:17px}
+.trail{font-size:14px;color:var(--muted);font-weight:700}
+.score{font-size:14px;color:var(--muted)}
+button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+
+/* coach memo */
+.memo{border:2px dashed var(--muted);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.memo h2{font-size:22px}
+.memo ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px;max-width:48em}
+.memo small{color:var(--muted)}
+
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.ring{transform-box:fill-box;transform-origin:center;animation:pulse 1.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.ring{animation:none}}
+
+@media (max-width:860px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .hero{grid-template-columns:1fr}
+  .quiz{grid-template-columns:1fr}
+  .stage{max-width:300px;margin:0 auto;width:100%}
+}
+@media (max-width:600px){
+  .cards,.two,.promises{grid-template-columns:1fr}
+  .seq{grid-template-columns:repeat(2,1fr)}
+  .wide{grid-template-columns:110px 1fr}
+}
+</style>
+
+<div class="wrap">
+<a href="./" style="display:inline-block;margin-top:16px;font-weight:900;color:var(--ink);text-decoration:none">← トップへ戻る</a>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">少年ソフトボール ・ こうげきのサイン</div>
+    <h1>サイン<br><span>ブック</span></h1>
+    <p class="golden">コーチが <em>さいしょにさわった「サインの場所」</em> がサイン！<br>そのあとに さわるのは ぜんぶ「ダミー（ニセモノ）」だよ。<small>肩・胸・ももは ノーカウント。とばして見よう。<br>あごは キーサイン。あごより前は ぜんぶダミーになるよ。</small></p>
+  </div>
+  <div class="hero-fig" id="heroFig"></div>
+</header>
+
+<section>
+  <h2><svg class="ball" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="var(--yellow)"/><path d="M6 6 Q12 15 6 24 M24 6 Q18 15 24 24" stroke="var(--red)" stroke-width="2" fill="none"/></svg>サインの見かた</h2>
+  <p class="lead">コーチは いくつも体をさわるけど、見るのは <b>サインの場所（5か所）の 1つめだけ</b>。肩・胸・ももは とばしてOK。たとえば下のように さわったら、答えは「バント」。</p>
+  <div class="seq" id="seq"></div>
+  <div class="answer">肩はノーカウント。サインの場所の1つめは「帽子のつば」だから <span class="chip" style="background:var(--blue)">バント</span></div>
+  <h3 class="sub">あご（キーサイン）が出たら</h3>
+  <p class="lead">あごをさわったら <b>それより前は ぜんぶダミー</b>。あごのあとに さいしょにさわった サインの場所 がサインだよ。</p>
+  <div class="seq" id="seqKey"></div>
+  <div class="answer">帽子のつばは あごより前だからダミー。あごのあとは「耳」だから <span class="chip" style="background:var(--green)">盗塁</span></div>
+</section>
+
+<section>
+  <h2><svg class="ball" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="var(--yellow)"/><path d="M6 6 Q12 15 6 24 M24 6 Q18 15 24 24" stroke="var(--red)" stroke-width="2" fill="none"/></svg>サインいちらん</h2>
+  <p class="lead"><b style="color:var(--green)">きほん</b> の3つは今までと同じ。<b style="color:var(--orange)">レベルアップ</b> の2つは新しいサイン。<b style="color:var(--ink)">あご</b> は とくべつな キーサインだよ。</p>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section>
+  <h2><svg class="ball" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="var(--yellow)"/><path d="M6 6 Q12 15 6 24 M24 6 Q18 15 24 24" stroke="var(--red)" stroke-width="2" fill="none"/></svg>とくべつなサイン</h2>
+  <div class="two" id="special"></div>
+</section>
+
+<section>
+  <h2><svg class="ball" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="var(--yellow)"/><path d="M6 6 Q12 15 6 24 M24 6 Q18 15 24 24" stroke="var(--red)" stroke-width="2" fill="none"/></svg>サインを見たら へんじをしよう</h2>
+  <p class="lead">バッターもランナーも、サインを見たら かならず へんじ。コーチは へんじを見るまで安心できないよ。</p>
+  <div class="two" id="reply"></div>
+</section>
+
+<section>
+  <h2><svg class="ball" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="var(--yellow)"/><path d="M6 6 Q12 15 6 24 M24 6 Q18 15 24 24" stroke="var(--red)" stroke-width="2" fill="none"/></svg>はやみひょう</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>さわる所</th><th>サイン</th><th>いちばん大事なこと</th></tr></thead>
+    <tbody id="tbl"></tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2><svg class="ball" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="var(--yellow)"/><path d="M6 6 Q12 15 6 24 M24 6 Q18 15 24 24" stroke="var(--red)" stroke-width="2" fill="none"/></svg>サインの やくそく</h2>
+  <ol class="promises">
+    <li><b>1球ごとに コーチを見る</b><span>打席に入るとき、ランナーに出たとき、1球ごとに見よう。</span></li>
+    <li><b>サインがなくても 見る</b><span>サインのときだけ見ると、相手に「なにかある」とバレちゃう。</span></li>
+    <li><b>顔に出さない</b><span>わかっても ニヤッとしない、キョロキョロしない。いつもと同じ顔で。</span></li>
+    <li><b>わからないまま やらない</b><span>まよったら「もう一回」のへんじ。まちがえてやるのが いちばんこわい。</span></li>
+    <li><b>ランナーも みんなで見る</b><span>バントやエンドランは バッターとランナーの2人でやるプレー。</span></li>
+    <li><b>ボールがはなれてから スタート</b><span>ソフトボールは ピッチャーの手からボールがはなれる前に塁をはなれるとアウト！</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2><svg class="ball" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="var(--yellow)"/><path d="M6 6 Q12 15 6 24 M24 6 Q18 15 24 24" stroke="var(--red)" stroke-width="2" fill="none"/></svg>サインクイズ</h2>
+  <p class="lead">「スタート」をおすと コーチが サインを出すよ。よーく見て、答えをえらんでね。</p>
+  <div class="quiz">
+    <div class="stage"><div class="count" id="count">じゅんびOK</div><div id="stageFig"></div></div>
+    <div class="qside">
+      <div class="modes" role="group" aria-label="むずかしさ">
+        <button class="mode" id="modeEasy" aria-pressed="true">かんたん</button>
+        <button class="mode" id="modeMid" aria-pressed="false">ふつう（あごあり）</button>
+        <button class="mode" id="modeHard" aria-pressed="false">むずかしい（あご＋取り消し）</button>
+      </div>
+      <button class="play" id="play">▶ スタート</button>
+      <div class="opts" id="opts"></div>
+      <div class="result" id="result" aria-live="polite"></div>
+      <div class="trail" id="trail"></div>
+      <div class="score" id="score"></div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+<script>
+const SPOTS = {
+  brim:    {x:100,y:66, elbow:[34,98],  label:"帽子のつば"},
+  ear:     {x:66, y:80, elbow:[28,114], label:"耳"},
+  back:    {x:148,y:202,elbow:[70,180], hand:[138,198], label:"手の甲"},
+  nose:    {x:100,y:89, elbow:[36,122], label:"鼻"},
+  belt:    {x:100,y:180,elbow:[48,168], label:"ベルト"},
+  chin:    {x:100,y:106,elbow:[40,142], label:"あご"},
+  shoulder:{x:128,y:128,elbow:[76,160], hand:[124,132], label:"肩"},
+  chest:   {x:100,y:146,elbow:[48,166], label:"胸"},
+  thigh:   {x:86, y:208,elbow:[48,178], label:"もも"},
+  cancel:  {x:146,y:168,elbow:[82,174], hand:[140,164], swipe:true, label:"腕をはらう"}
+};
+
+function coach(o={}){
+  const s = o.spot ? SPOTS[o.spot] : null;
+  const helmet = o.hat === "helmet";
+  const bothUp = o.both;
+  const ring = o.ring !== false;
+  const arm = (pts)=>`<path d="M${pts.map(p=>p.join(",")).join(" L")}" fill="none" stroke="var(--uni)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>`;
+  const hand = ([x,y])=>`<circle cx="${x}" cy="${y}" r="10" fill="var(--skin)" stroke="var(--skin-line)" stroke-width="1.5"/>`;
+
+  let otherArm, touchArm = "", ringSvg = "", extra = "";
+  if(bothUp){
+    otherArm = arm([[134,124],[172,100],[132,56]]) + hand([132,56]);
+    touchArm = arm([[66,124],[28,100],[68,56]]) + hand([68,56]);
+  } else {
+    otherArm = arm([[134,124],[146,166],[148,196]]) + hand([148,202]);
+    if(s){
+      const h = s.hand || [s.x,s.y];
+      touchArm = arm([[66,124],s.elbow,h]) + hand(h);
+      if(ring){
+        ringSvg = `<circle class="ring" cx="${s.x}" cy="${s.y}" r="17" fill="var(--yellow)" fill-opacity=".35" stroke="var(--red)" stroke-width="3" stroke-dasharray="5 4"/>`;
+      }
+      if(s.swipe){
+        extra = `<path d="M166 146 L168 198" stroke="var(--red)" stroke-width="4" stroke-linecap="round"/><path d="M160 190 L168 202 L176 190" fill="none" stroke="var(--red)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`;
+      }
+    } else {
+      touchArm = arm([[66,124],[54,166],[52,196]]) + hand([52,202]);
+    }
+  }
+  const hat = helmet
+    ? `<path d="M62 78 C58 30 142 30 138 78 Z" fill="var(--uni2)"/><circle cx="134" cy="84" r="12" fill="var(--uni2)"/><path d="M64 74 Q100 88 136 74 Q100 66 64 74 Z" fill="var(--uni)"/><circle cx="84" cy="50" r="5" fill="#fff" fill-opacity=".35"/>`
+    : `<path d="M68 70 C68 34 132 34 132 70 Z" fill="var(--uni)"/><path d="M60 70 Q100 88 140 70 Q100 60 60 70 Z" fill="var(--uni2)"/><circle cx="100" cy="55" r="5" fill="var(--yellow)"/>`;
+  const face = `
+    <circle cx="68" cy="82" r="7" fill="var(--skin)" stroke="var(--skin-line)" stroke-width="1.5"/>
+    <circle cx="132" cy="82" r="7" fill="var(--skin)" stroke="var(--skin-line)" stroke-width="1.5"/>
+    <circle cx="100" cy="78" r="32" fill="var(--skin)" stroke="var(--skin-line)" stroke-width="1.5"/>
+    <circle cx="88" cy="82" r="3.2" fill="#15223b"/><circle cx="112" cy="82" r="3.2" fill="#15223b"/>
+    <path d="M100 85 Q97 91 101 92" fill="none" stroke="var(--skin-line)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M91 98 Q100 104 109 98" fill="none" stroke="#15223b" stroke-width="2.4" stroke-linecap="round"/>`;
+  const body = `
+    <path d="M70 184 L130 184 L128 226 L104 226 L100 204 L96 226 L72 226 Z" fill="var(--pants)" stroke="#9aa3b0" stroke-width="1"/>
+    <rect x="92" y="104" width="16" height="16" fill="var(--skin)"/>
+    <path d="M64 118 Q100 112 136 118 L131 184 L69 184 Z" fill="var(--uni)"/>
+    <path d="M90 116 L100 132 L110 116" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <text x="100" y="164" text-anchor="middle" font-family="Dela Gothic One,sans-serif" font-size="22" fill="#fff">${helmet?"7":"31"}</text>
+    <rect x="69" y="176" width="62" height="9" rx="2" fill="#1a1f2b"/><rect x="95" y="176" width="10" height="9" rx="1" fill="var(--yellow)"/>`;
+  return `<svg viewBox="0 0 200 232" role="img" aria-label="${s?s.label+"をさわる":"かまえ"}" xmlns="http://www.w3.org/2000/svg">
+    ${body}${otherArm}${face}${hat}${touchArm}${extra}${ringSvg}</svg>`;
+}
+
+/* mini diamond: runners [[from,to]], batter action text */
+const BASE = {h:[60,92],1:[102,52],2:[60,12],3:[18,52]};
+function diamond(runs, bat, color){
+  const b = (k)=>BASE[k];
+  let svg = `<svg viewBox="0 0 120 124" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M60 4 L114 52 L60 100 L6 52 Z" fill="var(--field)"/>
+    <path d="M60 12 L102 52 L60 92 L18 52 Z" fill="none" stroke="var(--dirt)" stroke-width="5"/>`;
+  [1,2,3].forEach(k=>{const [x,y]=b(k);svg+=`<rect x="${x-5}" y="${y-5}" width="10" height="10" fill="#fff" stroke="#8a9" transform="rotate(45 ${x} ${y})"/>`});
+  svg += `<path d="M54 88 L66 88 L66 94 L60 99 L54 94 Z" fill="#fff" stroke="#8a9"/>`;
+  runs.forEach(([f,t])=>{
+    const [x1,y1]=b(f),[x2,y2]=b(t);
+    const mx=x1+(x2-x1)*.82,my=y1+(y2-y1)*.82;
+    svg += `<path d="M${x1} ${y1} L${mx} ${my}" stroke="${color}" stroke-width="4" stroke-dasharray="6 4" stroke-linecap="round"/>`;
+    const ang=Math.atan2(y2-y1,x2-x1)*180/Math.PI;
+    svg += `<path d="M-7 -6 L3 0 L-7 6 Z" fill="${color}" transform="translate(${mx} ${my}) rotate(${ang})"/>`;
+    svg += `<circle cx="${x1}" cy="${y1}" r="7" fill="${color}" stroke="#fff" stroke-width="2"/>`;
+  });
+  if(bat) svg += `<text x="60" y="118" text-anchor="middle" font-size="12" font-weight="900" fill="var(--ink)" font-family="Zen Maru Gothic,sans-serif">${bat}</text>`;
+  return svg + `</svg>`;
+}
+
+const SIGNS = [
+  {spot:"brim", name:"バント", cls:"c-bunt", color:"var(--blue)", level:"basic", runs:[[1,2]], bat:"ころがす",
+   todo:[["b","バットに当てて、ゴロをころがす"],["r","ゴロになったのを見てから 次の塁へ"]], key:"ランナーなしなら セーフティバント",
+   warn:"ランナーがいない時は セーフティバント。当てたら すぐ1塁へ全力！"},
+  {spot:"ear", name:"盗塁", cls:"c-steal", color:"var(--green)", level:"basic", runs:[[1,2]], bat:"見送る",
+   todo:[["r","ボールが手からはなれたら ダッシュ！"],["b","打たずに見送る（ランナーをたすける）"]], key:"はなれる前に出るとアウト"},
+  {spot:"back", name:"待て", cls:"c-wait", color:"var(--red)", level:"basic", runs:[], bat:"1球 見送る",
+   todo:[["b","つぎの1球は ぜったい打たない"],["r","走らない。リードだけ"]], key:"ストライクでも打たない"},
+  {spot:"nose", name:"エンドラン", cls:"c-run", color:"var(--purple)", level:"up", runs:[[1,2]], bat:"必ず打つ",
+   todo:[["r","ボールがはなれたら スタート"],["b","どんな球でも打つ。ゴロをねらう"]], key:"バッターは空ぶり・見送りダメ",
+   warn:"フライをあげるとランナーがもどれない。ゴロを打とう！"},
+  {spot:"belt", name:"スクイズ", cls:"c-squeeze", color:"var(--orange)", level:"up", runs:[[3,"h"]], bat:"必ずバント",
+   todo:[["r","3塁ランナーは ボールがはなれたら ホームへ"],["b","どんな球でも ぜったいバント"]], key:"見送ったらランナーがアウト",
+   warn:"いちばん大事なサイン。バッターは高い球でも とびついて当てる！"}
+];
+
+document.getElementById("heroFig").innerHTML = coach({spot:"brim"});
+
+/* sequence example: 肩（ノーカウント）→ 帽子のつば（サイン）→ ダミー */
+const steps = (list)=>list.map(([k,cls,note],i)=>`
+  <div class="step ${cls}"><span class="num">${i+1}</span>${coach({spot:k, ring:cls==="hit"||cls==="key"})}
+  <span class="where">${SPOTS[k].label}</span><span class="note">${note}</span></div>`).join("");
+document.getElementById("seq").innerHTML = steps([["shoulder","skip","ノーカウント"],["brim","hit","これがサイン！"],["ear","","ダミー"],["nose","","ダミー"]]);
+/* キーサイン例：帽子のつば（あごより前＝ダミー）→ あご（キー）→ 耳（サイン）→ 鼻 */
+document.getElementById("seqKey").innerHTML = steps([["brim","skip","あごより前＝ダミー"],["chin","key","キーサイン！"],["ear","hit","これがサイン！"],["nose","","ダミー"]]);
+
+/* cards */
+document.getElementById("cards").innerHTML = SIGNS.map(s=>`
+  <article class="card ${s.cls}">
+    <div class="card-top">${coach({spot:s.spot})}${diamond(s.runs,s.bat,s.color)}</div>
+    <div class="card-body">
+      <div class="pair"><span class="touch">${SPOTS[s.spot].label}</span><span class="arrow">→</span>
+        <span class="level ${s.level==="basic"?"basic":"up"}">${s.level==="basic"?"きほん":"レベルアップ"}</span></div>
+      <div class="sign-name">${s.name}</div>
+      <ul class="todo">${s.todo.map(([w,t])=>`<li><span class="who ${w}">${w==="b"?"バッター":"ランナー"}</span><span>${t}</span></li>`).join("")}</ul>
+      ${s.warn?`<p class="warn">${s.warn}</p>`:""}
+    </div>
+  </article>`).join("") + `
+  <article class="card c-key">
+    <div class="card-top">${coach({spot:"chin"})}
+      <div class="keyflow" aria-hidden="true">
+        <div class="kf x">ベルト</div><div class="kf-arrow">▼</div>
+        <div class="kf k">あご＝キー</div><div class="kf-arrow">▼</div>
+        <div class="kf s">耳＝盗塁</div>
+      </div></div>
+    <div class="card-body">
+      <div class="pair"><span class="touch">あご</span><span class="arrow">→</span><span class="level key">とくべつ</span></div>
+      <div class="sign-name">キーサイン</div>
+      <ul class="todo">
+        <li><span class="who b">みんな</span><span>あごより前に さわった所は ぜんぶダミー</span></li>
+        <li><span class="who b">みんな</span><span>あごのあとの さいしょの サインの場所 がサイン</span></li>
+      </ul>
+      <p class="warn">あごが出たら さいごまで よーく見よう。上の例は ベルトじゃなくて 盗塁！</p>
+    </div>
+  </article>`;
+
+/* special */
+document.getElementById("special").innerHTML = `
+  <div class="wide"><div class="figbox">${coach({spot:"cancel"})}</div>
+    <div class="txt"><h3>腕をはらう → <span style="color:var(--red)">取り消し</span></h3>
+    <p>「さっきのサインは なし！」の合図。<br>取り消しのあとに さわった <b>サインの場所の1つめ</b> が 新しいサインになるよ。</p></div></div>
+  <div class="wide"><div class="figbox">${coach({spot:"chest"})}</div>
+    <div class="txt"><h3>肩・胸・もも → <span style="color:var(--green)">ノーカウント</span></h3>
+    <p>ここは とばして見る。そのあとに サインの場所をさわったら、それがサイン。<br>（例：肩 → 帽子のつば ＝ バント）<br>肩・胸・ももしか さわらなかったら <b>サインなし</b>＝自由に打とう！</p></div></div>`;
+
+/* reply */
+const reply = (o)=>`<div class="wide"><div class="figbox">${o.fig}</div><div class="txt"><h3>${o.h}</h3><p>${o.p}</p></div></div>`;
+document.getElementById("reply").innerHTML =
+  reply({fig:coach({spot:"brim",hat:"helmet"}), h:'ヘルメットのつば → <span style="color:var(--green)">わかった！</span>', p:"サインがわかったら、ヘルメットのつばを ちょんとさわる。サインなしの時もやろう。"}) +
+  reply({fig:coach({hat:"helmet",both:true}), h:'両手でヘルメット → <span style="color:var(--red)">もう一回！</span>', p:"わからなかったら 両手でヘルメットをかぶりなおす。コーチが もう一度出すよ。"});
+
+/* table */
+const rows = SIGNS.map(s=>`<tr class="${s.cls}"><td>${SPOTS[s.spot].label}</td><td class="big"><span class="dot"></span>${s.name}</td><td>${s.key}</td></tr>`).join("")
+ + `<tr><td>あご</td><td class="big">キーサイン</td><td>あごより前はダミー。あごのあとの サインの場所がサイン</td></tr>`
+ + `<tr><td>腕をはらう</td><td class="big">取り消し</td><td>このあとの サインの場所の1つめが新しいサイン</td></tr>`
+ + `<tr><td>肩・胸・もも</td><td class="big">ノーカウント</td><td>とばす。ここしか さわらなければ サインなし（自由に打つ）</td></tr>`;
+document.getElementById("tbl").innerHTML = rows;
+
+/* quiz */
+const ANSWERS = [...SIGNS.map(s=>s.name),"サインなし"];
+const SIGN_SPOTS = SIGNS.map(s=>s.spot);
+const DUMMY = ["shoulder","chest","thigh"];
+const ALL = [...SIGN_SPOTS,...DUMMY];
+let level=0, busy=false, current=null, right=0, total=0, timers=[];
+const $ = (id)=>document.getElementById(id);
+const pick = (a)=>a[Math.floor(Math.random()*a.length)];
+
+/* 答え：最後の「取り消し」より後を見る。その中に あご があれば あごより後だけを見る。
+   そこで最初にさわったサインの場所がサイン。なければサインなし */
+function judge(seq){
+  let rest = seq.slice(seq.lastIndexOf("cancel")+1);
+  const key = rest.indexOf("chin");
+  if(key>=0) rest = rest.slice(key+1);
+  const hit = rest.find(k=>SIGN_SPOTS.includes(k));
+  const sign = hit ? SIGNS.find(s=>s.spot===hit) : null;
+  return {answer: sign?sign.name:"サインなし", hit, key:key>=0};
+}
+function makeQuestion(){
+  const seq=[];
+  if(level===2 && Math.random()<0.6){
+    const pre = 1+Math.floor(Math.random()*2);
+    for(let i=0;i<pre;i++) seq.push(pick(ALL));
+    seq.push("cancel");
+  }
+  if(level>=1 && Math.random()<0.65){
+    const pre = 1+Math.floor(Math.random()*2);
+    for(let i=0;i<pre;i++) seq.push(pick(ALL));
+    seq.push("chin");
+  }
+  const lead = Math.random()<0.5 ? 1+Math.floor(Math.random()*2) : 0;
+  for(let i=0;i<lead;i++) seq.push(pick(DUMMY));
+  const noSign = Math.random()<0.15;
+  if(noSign){
+    const n = 2+Math.floor(Math.random()*2) - lead;
+    for(let i=0;i<Math.max(n,1);i++) seq.push(pick(DUMMY));
+  } else {
+    seq.push(pick(SIGN_SPOTS));
+    const tail = 2+Math.floor(Math.random()*2);
+    for(let i=0;i<tail;i++) seq.push(pick(ALL));
+  }
+  return {seq, ...judge(seq)};
+}
+function stage(spot){ $("stageFig").innerHTML = coach({spot, ring:!!spot}); }
+function renderOpts(enabled){
+  $("opts").innerHTML = ANSWERS.map(a=>`<button class="opt" ${enabled?"":"disabled"} data-a="${a}">${a}</button>`).join("");
+}
+function play(){
+  if(busy) return;
+  timers.forEach(clearTimeout); timers=[];
+  busy=true; $("play").disabled=true; $("result").textContent=""; $("trail").textContent="";
+  current = makeQuestion();
+  renderOpts(false);
+  const step=900, gap=280;
+  current.seq.forEach((k,i)=>{
+    timers.push(setTimeout(()=>{stage(k); $("count").textContent=`${i+1}つめ`;}, i*(step+gap)));
+    timers.push(setTimeout(()=>stage(null), i*(step+gap)+step));
+  });
+  timers.push(setTimeout(()=>{
+    $("count").textContent="答えをえらんでね"; busy=false; $("play").disabled=false;
+    $("play").textContent="▶ もう一回 見る（新しい問題）"; renderOpts(true);
+  }, current.seq.length*(step+gap)));
+}
+$("opts").addEventListener("click",e=>{
+  const btn=e.target.closest(".opt"); if(!btn||btn.disabled||!current) return;
+  const ok = btn.dataset.a===current.answer;
+  total++; if(ok) right++;
+  document.querySelectorAll(".opt").forEach(b=>{b.disabled=true; if(b.dataset.a===current.answer) b.classList.add("right");});
+  if(!ok) btn.classList.add("wrong");
+  const pre = current.key ? "あごのあと、" : current.seq.includes("cancel") ? "取り消しのあと、" : "";
+  $("result").innerHTML = (ok?"せいかい！ ":"ざんねん… ") + (current.hit
+    ? `${pre}さいしょにさわったサインの場所は「${SPOTS[current.hit].label}」→ ${current.answer}`
+    : `${pre}肩・胸・ももしか さわってない → サインなし`);
+  $("trail").textContent = "コーチの動き： " + current.seq.map(k=>SPOTS[k].label).join(" → ");
+  $("score").textContent = `${total}問中 ${right}問 せいかい`;
+});
+const MODES=["modeEasy","modeMid","modeHard"];
+function setMode(n){
+  level=n; MODES.forEach((id,i)=>$(id).setAttribute("aria-pressed",String(i===n)));
+}
+MODES.forEach((id,i)=>$(id).onclick=()=>setMode(i));
+$("play").onclick=play;
+stage(null); renderOpts(false);
+</script>
+
+</body></html>
