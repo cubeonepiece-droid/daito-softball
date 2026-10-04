@@ -18,9 +18,6 @@
   figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 6px; }
   .svg-ink { fill: var(--text); }
   .svg-quiet { fill: var(--muted); }
-  ul.check { list-style: none; padding-left: 0; }
-  ul.check li { padding-left: 1.8em; position: relative; margin-bottom: 4px; }
-  ul.check li::before { content: "☐"; position: absolute; left: 0.2em; color: var(--accent); }
 </style>
 </head>
 <body>
@@ -102,15 +99,6 @@
   </figure>
   <p>外野フェンスがない場合は、本塁から53.34mの円弧をライン・コーンで示し、超えた打球の扱いを試合前に両チームで決めます。</p>
 
-  <h2>必要な用地と方位</h2>
-  <p>外野フェンス53.34mとファウル地域・バックストップを含め、約65m × 65mの平坦地が必要です。本塁を用地の一角に置き、対角線方向に外野を取ると最も効率よく収まります。</p>
-  <ul>
-    <li><strong>方位</strong>：本塁から二塁への向きを東北東にすると、午後の西日が打者・捕手の正面に入りません。</li>
-    <li><strong>ファウル地域</strong>：ファウルラインの外側に7.62m以上。この境界がボールデッドラインになります。</li>
-    <li><strong>バックストップ</strong>：本塁の後方7.62m以上。</li>
-    <li><strong>地面</strong>：水たまりや凹凸、石、排水溝の蓋などは作図前に確認します。</li>
-  </ul>
-
   <h2>主要寸法一覧</h2>
   <p>小学生は塁間16.76m・投球距離12.19mで、一般（18.29m・14.02m）より一回り小さいグラウンドです。</p>
   <div class="table-wrap"><table>
@@ -134,24 +122,74 @@
   <p class="note">塁間・外野距離は公開資料で確認した小学生規格です（<a href="https://softball.plala-hometime.com/field-dimensions/">出典</a>、<a href="https://softball-times.com/20200523-4">出典</a>）。各ボックス類は一般規格の概数なので、大会要項やJSA規則で確認してください。</p>
   <p class="note">小学生の投球距離は、<a href="https://www.softball.or.jp/bulletin/index/pdf/Jsa_Rule_Changes.pdf">JSA 2025年度ルール改正点</a>（ルール2-3項）で10.67mから12.19mに延伸されました。古い資料や既存の投手板位置は10.67mのままのことがあるので注意してください。</p>
 
-  <h2>必要な道具・資材</h2>
-  <p>作図は3人体制（巻尺の両端を2人、杭打ち1人）が最も早く、正確です。</p>
+  <h2>バッターズボックスのサイズ</h2>
+  <p>バッターズボックスは幅0.91m × 長さ2.13mで、本塁の左右に0.15mずつ離して1つずつ描きます。後ろにキャッチャーズボックス（幅2.57m × 長さ3.05m）が続きます。</p>
+  <figure>
+    <svg viewBox="0 0 760 660" role="img" aria-label="バッターズボックスとキャッチャーズボックスの寸法" font-size="13">
+      <text x="24" y="32" font-size="15" font-weight="600" class="svg-ink">バッターズボックスとキャッチャーズボックスの寸法</text>
+      <text x="24" y="52" font-size="11.5" class="svg-quiet">上が投手側・左が三塁側。寸法はラインの外側で測る（ラインもボックスに含む）</text>
+      <!-- 投手方向 -->
+      <path d="M380 92 L380 70" stroke="var(--axis)" stroke-width="1.5"/>
+      <path d="M374 78 L380 68 L386 78" fill="none" stroke="var(--axis)" stroke-width="1.5"/>
+      <text x="392" y="82" font-size="11.5" class="svg-quiet">投手側</text>
+      <!-- バッターズボックス -->
+      <g fill="var(--tint)" stroke="var(--cat1)" stroke-width="2.5">
+        <rect x="265" y="130" width="82" height="192"/>
+        <rect x="413" y="130" width="82" height="192"/>
+      </g>
+      <text x="306" y="232" text-anchor="middle" font-size="12" class="svg-ink">右打者</text>
+      <text x="454" y="232" text-anchor="middle" font-size="12" class="svg-ink">左打者</text>
+      <!-- キャッチャーズボックス -->
+      <rect x="265" y="322" width="230" height="274" fill="none" stroke="var(--cat1)" stroke-width="2.5"/>
+      <text x="380" y="466" text-anchor="middle" font-size="12" class="svg-ink">キャッチャーズボックス</text>
+      <!-- 本塁 -->
+      <polygon points="361,206 399,206 399,225 380,245 361,225" fill="#ffffff" stroke="var(--axis)" stroke-width="1.5"/>
+      <text x="380" y="270" text-anchor="middle" font-size="11.5" class="svg-ink">本塁</text>
+      <text x="380" y="285" text-anchor="middle" font-size="11" class="svg-quiet">幅43.2cm</text>
+      <!-- 寸法線：ボックス幅 -->
+      <g stroke="var(--axis)" stroke-width="1">
+        <line x1="265" y1="112" x2="347" y2="112"/><line x1="265" y1="106" x2="265" y2="118"/><line x1="347" y1="106" x2="347" y2="118"/>
+        <line x1="413" y1="112" x2="495" y2="112"/><line x1="413" y1="106" x2="413" y2="118"/><line x1="495" y1="106" x2="495" y2="118"/>
+      </g>
+      <text x="306" y="104" text-anchor="middle" font-weight="600" class="svg-ink">0.91m</text>
+      <text x="454" y="104" text-anchor="middle" font-weight="600" class="svg-ink">0.91m</text>
+      <!-- 寸法線：ボックス長さ -->
+      <g stroke="var(--axis)" stroke-width="1">
+        <line x1="240" y1="130" x2="240" y2="322"/><line x1="234" y1="130" x2="246" y2="130"/><line x1="234" y1="322" x2="246" y2="322"/>
+      </g>
+      <text x="230" y="230" text-anchor="end" font-weight="600" class="svg-ink">2.13m</text>
+      <!-- 寸法線：本塁との間隔 -->
+      <g stroke="var(--cat2)" stroke-width="1">
+        <line x1="347" y1="196" x2="361" y2="196"/><line x1="399" y1="196" x2="413" y2="196"/>
+      </g>
+      <text x="380" y="190" text-anchor="middle" font-size="11" font-weight="600" fill="var(--cat2)">0.15m</text>
+      <!-- 寸法線：キャッチャーズボックス -->
+      <g stroke="var(--axis)" stroke-width="1">
+        <line x1="265" y1="618" x2="495" y2="618"/><line x1="265" y1="612" x2="265" y2="624"/><line x1="495" y1="612" x2="495" y2="624"/>
+        <line x1="520" y1="322" x2="520" y2="596"/><line x1="514" y1="322" x2="526" y2="322"/><line x1="514" y1="596" x2="526" y2="596"/>
+      </g>
+      <text x="380" y="642" text-anchor="middle" font-weight="600" class="svg-ink">2.57m</text>
+      <text x="530" y="464" font-weight="600" class="svg-ink">3.05m</text>
+      <!-- 補足 -->
+      <g font-size="11.5" class="svg-quiet">
+        <text x="520" y="160">本塁の横幅の中央が</text>
+        <text x="520" y="176">ボックスの長さの中央</text>
+        <text x="520" y="192">（前後に約1.07mずつ）</text>
+      </g>
+    </svg>
+    <figcaption>バッターズボックスのサイズ · 小学生用（一般規格の概数）</figcaption>
+  </figure>
   <div class="table-wrap"><table>
-    <thead><tr><th>品目</th><th>数量</th><th>用途</th></tr></thead>
+    <thead><tr><th>項目</th><th>寸法</th></tr></thead>
     <tbody>
-      <tr><td>スチールまたはガラス繊維の巻尺（50m）</td><td>2本</td><td>塁間・対角線の同時計測</td></tr>
-      <tr><td>巻尺（5m）</td><td>1本</td><td>ボックス類の寸法取り</td></tr>
-      <tr><td>木杭またはペグ・長釘</td><td>20本程度</td><td>基準点の目印</td></tr>
-      <tr><td>ハンマー</td><td>1本</td><td>杭打ち</td></tr>
-      <tr><td>水糸（100m巻）</td><td>1巻</td><td>ファウルラインの直線出し</td></tr>
-      <tr><td>ラインカー</td><td>1台</td><td>ライン引き</td></tr>
-      <tr><td>ライン用粉（炭酸カルシウム）</td><td>20kg袋を1～2袋</td><td>ライン材料。消石灰は目や皮膚を傷めるため使わない</td></tr>
-      <tr><td>マーキングスプレー</td><td>1本</td><td>円や交点の仮印</td></tr>
-      <tr><td>ベース一式（本塁・一塁ダブルベース・二塁・三塁）</td><td>1式</td><td>塁の設置</td></tr>
-      <tr><td>投手板（61cm × 15.2cm）</td><td>1枚</td><td>投手板の設置</td></tr>
-      <tr><td>トンボ・レーキ</td><td>各数本</td><td>地面の整地</td></tr>
+      <tr><td>バッターズボックス</td><td>幅0.91m × 長さ2.13m（左右に1つずつ）</td></tr>
+      <tr><td>本塁との間隔</td><td>本塁の左右の辺から0.15mずつ</td></tr>
+      <tr><td>前後の位置</td><td>本塁の横幅の中央がボックスの長さの中央</td></tr>
+      <tr><td>2つのボックスの外側どうし</td><td>約2.55m（0.91m＋0.15m＋本塁0.432m＋0.15m＋0.91m）</td></tr>
+      <tr><td>キャッチャーズボックス</td><td>幅2.57m × 長さ3.05m（バッターズボックスの後端から後方へ）</td></tr>
     </tbody>
   </table></div>
+  <p class="note">ボックス類の寸法は一般規格の概数です。大会要項やJSA規則で確認してください。</p>
 
   <h2>作図手順</h2>
   <p>本塁→二塁→一塁・三塁→投手板の順に杭を打ち、最後に対角線で検算します。</p>
@@ -229,26 +267,6 @@
     </tbody>
   </table></div>
   <p>ベースの固定釘やアンカーが地面から出ていないか、設置後に必ず足で踏んで確認します。</p>
-
-  <h2>整備と安全チェックリスト</h2>
-  <p>試合前に次の項目を確認し、試合後はトンボがけと穴埋めを行います。</p>
-  <h3>試合前</h3>
-  <ul class="check">
-    <li>塁間と対角線（23.70m）を再測した</li>
-    <li>投球距離が12.19mになっている（旧規格10.67mのままになっていない）</li>
-    <li>ベース・投手板が固定され、釘やアンカーが出ていない</li>
-    <li>内野に石・ガラス片・凹みがない</li>
-    <li>水たまりはスポンジで吸い取り、砂を散布した</li>
-    <li>ファウル地域・ベンチ前に障害物（自転車、荷物など）がない</li>
-    <li>観客や通行人がファウルボールの飛ぶ範囲にいないよう区切った</li>
-    <li>外野にフェンスがない場合、コーンやラインで本塁打ラインを示し、グラウンドルールを両チームで確認した</li>
-  </ul>
-  <h3>試合後</h3>
-  <ul class="check">
-    <li>投手板前と打席の掘れた穴を埋め、踏み固めた</li>
-    <li>内野全体をトンボで平らにした</li>
-    <li>常設しない場合、ベースと杭を撤収した（基準杭の位置は写真と距離で記録すると次回が速い）</li>
-  </ul>
 
   <a class="back bottom" href="./">← トップへ戻る</a>
 </main>
