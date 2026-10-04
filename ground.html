@@ -132,7 +132,7 @@
       <tr><td>ボールデッドライン</td><td>ファウルラインの外側7.62m以上</td></tr>
       <tr><td>バックストップ</td><td>本塁後方7.62m以上</td></tr>
       <tr><td>投手サークル</td><td>半径2.44m、投手板前縁中央が中心</td></tr>
-      <tr><td>バッターズボックス</td><td>幅0.91m × 長さ2.13m、本塁から0.15m離す</td></tr>
+      <tr><td>バッターズボックス</td><td>幅0.91m × 長さ2.13m、本塁から0.15m離す。前の線は本塁の中心線から1.22m前方</td></tr>
       <tr><td>キャッチャーズボックス</td><td>幅2.57m × 長さ3.05m（打席後端から後方へ）</td></tr>
       <tr><td>コーチャーズボックス</td><td>塁線から3.66m外側、長さ4.57m</td></tr>
       <tr><td>スリーフットライン</td><td>本塁・一塁間の後半8.38m、一塁線の0.91m外側</td></tr>
@@ -144,73 +144,92 @@
   <p class="note">小学生の投球距離は、<a href="https://www.softball.or.jp/bulletin/index/pdf/Jsa_Rule_Changes.pdf">JSA 2025年度ルール改正点</a>（ルール2-3項）で10.67mから12.19mに延伸されました。古い資料や既存の投手板位置は10.67mのままのことがあるので注意してください。</p>
 
   <h2>バッターズボックスのサイズ</h2>
-  <p>バッターズボックスは幅0.91m × 長さ2.13mで、本塁の左右に0.15mずつ離して1つずつ描きます。後ろにキャッチャーズボックス（幅2.57m × 長さ3.05m）が続きます。</p>
+  <p>バッターズボックスは幅0.91m × 長さ2.13m（ラインを含む）で、本塁の左右に1つずつ描きます。前の線は、本塁の中心を通る横線から投手側へ1.22mの位置です。</p>
   <figure>
-    <svg viewBox="0 0 760 660" role="img" aria-label="バッターズボックスとキャッチャーズボックスの寸法" font-size="13">
-      <text x="24" y="32" font-size="15" font-weight="600" class="svg-ink">バッターズボックスとキャッチャーズボックスの寸法</text>
+    <svg viewBox="0 0 760 680" role="img" aria-label="バッターズボックスとキャッチャーズボックスの本塁からの距離" font-size="13">
+      <text x="24" y="32" font-size="15" font-weight="600" class="svg-ink">バッターズボックスとキャッチャーズボックスの位置（本塁からの距離）</text>
       <text x="24" y="52" font-size="11.5" class="svg-quiet">上が投手側・左が三塁側。寸法はラインの外側で測る（ラインもボックスに含む）</text>
-      <!-- 投手方向 -->
-      <path d="M380 92 L380 70" stroke="var(--axis)" stroke-width="1.5"/>
-      <path d="M374 78 L380 68 L386 78" fill="none" stroke="var(--axis)" stroke-width="1.5"/>
-      <text x="392" y="82" font-size="11.5" class="svg-quiet">投手側</text>
-      <!-- バッターズボックス -->
+      <path d="M380 100 L380 76" stroke="var(--axis)" stroke-width="1.5"/>
+      <path d="M374 84 L380 74 L386 84" fill="none" stroke="var(--axis)" stroke-width="1.5"/>
+      <text x="392" y="90" font-size="11.5" class="svg-quiet">投手側</text>
       <g fill="var(--tint)" stroke="var(--cat1)" stroke-width="2.5">
-        <rect x="265" y="130" width="82" height="192"/>
-        <rect x="413" y="130" width="82" height="192"/>
+        <rect x="265" y="146" width="82" height="192"/>
+        <rect x="413" y="146" width="82" height="192"/>
       </g>
-      <text x="306" y="232" text-anchor="middle" font-size="12" class="svg-ink">右打者</text>
-      <text x="454" y="232" text-anchor="middle" font-size="12" class="svg-ink">左打者</text>
-      <!-- キャッチャーズボックス -->
-      <rect x="265" y="322" width="230" height="274" fill="none" stroke="var(--cat1)" stroke-width="2.5"/>
-      <text x="380" y="466" text-anchor="middle" font-size="12" class="svg-ink">キャッチャーズボックス</text>
-      <!-- 本塁 -->
-      <polygon points="361,206 399,206 399,225 380,245 361,225" fill="#ffffff" stroke="var(--axis)" stroke-width="1.5"/>
-      <text x="380" y="270" text-anchor="middle" font-size="11.5" class="svg-ink">本塁</text>
-      <text x="380" y="285" text-anchor="middle" font-size="11" class="svg-quiet">幅43.2cm</text>
-      <!-- 寸法線：ボックス幅 -->
+      <text x="306" y="186" text-anchor="middle" font-size="12" class="svg-ink">右打者</text>
+      <text x="454" y="186" text-anchor="middle" font-size="12" class="svg-ink">左打者</text>
+      <rect x="265" y="338" width="230" height="274" fill="none" stroke="var(--cat1)" stroke-width="2.5"/>
+      <text x="380" y="480" text-anchor="middle" font-size="12" class="svg-ink">キャッチャーズボックス</text>
+      <line x1="230" y1="255" x2="600" y2="255" stroke="var(--cat2)" stroke-width="1.25" stroke-dasharray="5 4"/>
+      <text x="606" y="259" font-size="11.5" font-weight="600" fill="var(--cat2)">本塁の中心線</text>
+      <polygon points="361,236 399,236 399,255 380,275 361,255" fill="#ffffff" stroke="var(--axis)" stroke-width="1.5"/>
+      <text x="380" y="298" text-anchor="middle" font-size="11.5" class="svg-ink">本塁</text>
+      <text x="380" y="313" text-anchor="middle" font-size="11" class="svg-quiet">幅43.2cm</text>
       <g stroke="var(--axis)" stroke-width="1">
-        <line x1="265" y1="112" x2="347" y2="112"/><line x1="265" y1="106" x2="265" y2="118"/><line x1="347" y1="106" x2="347" y2="118"/>
-        <line x1="413" y1="112" x2="495" y2="112"/><line x1="413" y1="106" x2="413" y2="118"/><line x1="495" y1="106" x2="495" y2="118"/>
+        <line x1="265" y1="128" x2="347" y2="128"/><line x1="265" y1="122" x2="265" y2="134"/><line x1="347" y1="122" x2="347" y2="134"/>
+        <line x1="413" y1="128" x2="495" y2="128"/><line x1="413" y1="122" x2="413" y2="134"/><line x1="495" y1="122" x2="495" y2="134"/>
       </g>
-      <text x="306" y="104" text-anchor="middle" font-weight="600" class="svg-ink">0.91m</text>
-      <text x="454" y="104" text-anchor="middle" font-weight="600" class="svg-ink">0.91m</text>
-      <!-- 寸法線：ボックス長さ -->
+      <text x="306" y="120" text-anchor="middle" font-weight="600" class="svg-ink">0.91m</text>
+      <text x="454" y="120" text-anchor="middle" font-weight="600" class="svg-ink">0.91m</text>
       <g stroke="var(--axis)" stroke-width="1">
-        <line x1="240" y1="130" x2="240" y2="322"/><line x1="234" y1="130" x2="246" y2="130"/><line x1="234" y1="322" x2="246" y2="322"/>
+        <line x1="240" y1="146" x2="240" y2="338"/><line x1="234" y1="146" x2="246" y2="146"/><line x1="234" y1="338" x2="246" y2="338"/>
       </g>
-      <text x="230" y="230" text-anchor="end" font-weight="600" class="svg-ink">2.13m</text>
-      <!-- 寸法線：本塁との間隔 -->
+      <text x="230" y="246" text-anchor="end" font-weight="600" class="svg-ink">2.13m</text>
       <g stroke="var(--cat2)" stroke-width="1">
-        <line x1="347" y1="196" x2="361" y2="196"/><line x1="399" y1="196" x2="413" y2="196"/>
+        <line x1="347" y1="226" x2="361" y2="226"/><line x1="399" y1="226" x2="413" y2="226"/>
       </g>
-      <text x="380" y="190" text-anchor="middle" font-size="11" font-weight="600" fill="var(--cat2)">0.15m</text>
-      <!-- 寸法線：キャッチャーズボックス -->
+      <text x="380" y="220" text-anchor="middle" font-size="11" font-weight="600" fill="var(--cat2)">0.15m</text>
+      <g stroke="var(--cat2)" stroke-width="1">
+        <line x1="560" y1="146" x2="560" y2="255"/><line x1="554" y1="146" x2="566" y2="146"/>
+        <line x1="560" y1="255" x2="560" y2="338"/><line x1="554" y1="338" x2="566" y2="338"/>
+        <line x1="495" y1="146" x2="554" y2="146" stroke-dasharray="2 3"/><line x1="495" y1="338" x2="554" y2="338" stroke-dasharray="2 3"/>
+      </g>
+      <text x="570" y="206" font-weight="600" fill="var(--cat2)">1.22m</text>
+      <text x="570" y="222" font-size="11" class="svg-quiet">（投手側へ）</text>
+      <text x="570" y="300" font-weight="600" fill="var(--cat2)">0.91m</text>
+      <text x="570" y="316" font-size="11" class="svg-quiet">（捕手側へ）</text>
       <g stroke="var(--axis)" stroke-width="1">
-        <line x1="265" y1="618" x2="495" y2="618"/><line x1="265" y1="612" x2="265" y2="624"/><line x1="495" y1="612" x2="495" y2="624"/>
-        <line x1="520" y1="322" x2="520" y2="596"/><line x1="514" y1="322" x2="526" y2="322"/><line x1="514" y1="596" x2="526" y2="596"/>
+        <line x1="265" y1="634" x2="495" y2="634"/><line x1="265" y1="628" x2="265" y2="640"/><line x1="495" y1="628" x2="495" y2="640"/>
+        <line x1="520" y1="338" x2="520" y2="612"/><line x1="514" y1="338" x2="526" y2="338"/><line x1="514" y1="612" x2="526" y2="612"/>
       </g>
-      <text x="380" y="642" text-anchor="middle" font-weight="600" class="svg-ink">2.57m</text>
-      <text x="530" y="464" font-weight="600" class="svg-ink">3.05m</text>
-      <!-- 補足 -->
-      <g font-size="11.5" class="svg-quiet">
-        <text x="520" y="160">本塁の横幅の中央が</text>
-        <text x="520" y="176">ボックスの長さの中央</text>
-        <text x="520" y="192">（前後に約1.07mずつ）</text>
-      </g>
+      <text x="380" y="658" text-anchor="middle" font-weight="600" class="svg-ink">2.57m</text>
+      <text x="530" y="480" font-weight="600" class="svg-ink">3.05m</text>
     </svg>
-    <figcaption>バッターズボックスのサイズ · 小学生用（一般規格の概数）</figcaption>
+    <figcaption>本塁の中心線＝本塁の前縁から21.6cm後ろ（左右の辺が終わる位置）を通る横線</figcaption>
   </figure>
+
+  <h3>本塁からの距離（明細）</h3>
+  <p>左右は本塁の左右の辺から、前後は本塁の中心線（本塁の前縁から21.6cm後ろ）から測ります。</p>
   <div class="table-wrap"><table>
-    <thead><tr><th>項目</th><th>寸法</th></tr></thead>
+    <thead><tr><th>ボックスの線</th><th>本塁からの距離</th><th>別の基準での目安</th></tr></thead>
     <tbody>
-      <tr><td>バッターズボックス</td><td>幅0.91m × 長さ2.13m（左右に1つずつ）</td></tr>
-      <tr><td>本塁との間隔</td><td>本塁の左右の辺から0.15mずつ</td></tr>
-      <tr><td>前後の位置</td><td>本塁の横幅の中央がボックスの長さの中央</td></tr>
-      <tr><td>2つのボックスの外側どうし</td><td>約2.55m（0.91m＋0.15m＋本塁0.432m＋0.15m＋0.91m）</td></tr>
-      <tr><td>キャッチャーズボックス</td><td>幅2.57m × 長さ3.05m（バッターズボックスの後端から後方へ）</td></tr>
+      <tr><td>内側の線（本塁側）</td><td>本塁の左右の辺から外へ<b>0.15m</b></td><td>本塁の中央（縦の中心線）から0.37m</td></tr>
+      <tr><td>外側の線</td><td>本塁の左右の辺から外へ<b>1.06m</b></td><td>本塁の中央から1.28m</td></tr>
+      <tr><td>前の線（投手側）</td><td>本塁の中心線から投手側へ<b>1.22m</b></td><td>本塁の前縁から投手側へ約1.00m</td></tr>
+      <tr><td>後ろの線（捕手側）</td><td>本塁の中心線から捕手側へ<b>0.91m</b></td><td>本塁の尖端から捕手側へ約0.69m</td></tr>
+      <tr><td>左右のボックスの外側どうし</td><td colspan="2">約2.55m（1.06m＋本塁0.432m＋1.06m）</td></tr>
     </tbody>
   </table></div>
-  <p class="note">ボックス類の寸法は一般規格の概数です。大会要項やJSA規則で確認してください。</p>
+
+  <h3>キャッチャーズボックス</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>ボックスの線</th><th>本塁からの距離</th></tr></thead>
+    <tbody>
+      <tr><td>前の線</td><td>バッターズボックスの後ろの線と同じ（本塁の中心線から捕手側へ0.91m）</td></tr>
+      <tr><td>後ろの線</td><td>前の線からさらに3.05m後方（本塁の尖端から約3.74m）</td></tr>
+      <tr><td>左右の線</td><td>幅2.57m。左右のバッターズボックスの外側の線の延長とほぼ同じ位置</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>描き方の手順</h3>
+  <ol>
+    <li>本塁の前縁から21.6cm後ろ（左右の辺が終わる位置）に、本塁と平行な横線を水糸で張ります。これが「本塁の中心線」です。</li>
+    <li>本塁の左右の辺から外へ0.15mの位置に内側の線を取ります。そこからさらに外へ0.91m（辺から1.06m）が外側の線です。</li>
+    <li>中心線から投手側へ1.22mの位置に前の線、捕手側へ0.91mの位置に後ろの線を引きます（合計2.13m）。</li>
+    <li>描いた長方形の対角線を2本測り、同じ長さ（約2.32m）なら直角が出ています。</li>
+    <li>後ろの線からさらに3.05m後方まで、幅2.57mでキャッチャーズボックスを描きます。</li>
+  </ol>
+  <p class="note">位置の規定は「前の線は本塁の中心を通る線から1.22m前方、内側の線は本塁から15.2cm、ラインを含めて0.91m × 2.13m」です（<a href="https://flosoftball.com/articles/5057740-softball-facts-dimensions-distance-and-diameters">出典</a>）。キャッチャーズボックスなどは一般規格の概数なので、大会要項やJSA規則で確認してください。</p>
 
   <h2>作図手順</h2>
   <p>本塁→二塁→一塁・三塁→投手板の順に杭を打ち、最後に対角線で検算します。</p>
@@ -266,7 +285,7 @@
   <p>ラインは必ず水糸や巻尺に沿って引き、ファウルラインは糸がラインの外縁（ファウル側）に来るように引きます。ライン自体はフェア地域に含まれるためです。</p>
   <ol>
     <li><strong>ファウルライン</strong>：本塁後端から外野フェンスまで。ラインカーは止まらず一定の速さで押すと幅が揃います。</li>
-    <li><strong>バッターズボックス</strong>：本塁の左右に0.15m離して、幅0.91m × 長さ2.13mの長方形を描きます。本塁の横幅中央がボックスの長さの中央に来るように置きます。</li>
+    <li><strong>バッターズボックス</strong>：本塁の左右に0.15m離して、幅0.91m × 長さ2.13mの長方形を描きます。前の線は本塁の中心線から投手側へ1.22m（詳しくは「バッターズボックスのサイズ」参照）。</li>
     <li><strong>キャッチャーズボックス</strong>：バッターズボックスの後端から後方へ3.05m、幅2.57m。</li>
     <li><strong>投手サークル</strong>：投手板前縁中央に打った釘に紐を掛け、半径2.44mで円を描きます。先にスプレーで点を打ち、それをつなぐときれいに引けます。</li>
     <li><strong>コーチャーズボックス</strong>：一塁線・三塁線から3.66m外側に、塁線と平行に長さ4.57mの線を引きます。</li>
